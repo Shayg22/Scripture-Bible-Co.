@@ -229,16 +229,18 @@
       <h2>Gentle Reflection Tool</h2>
       <p>Select what your heart is needing today to receive a prompt and scripture reflection:</p>
       
-      <div class="button-grid">
-        <button class="btn" onclick="showReflection('peace')">Seeking Peace</button>
-        <button class="btn" onclick="showReflection('trust')">Need Trust</button>
-        <button class="btn" onclick="showReflection('renewal')">New Heart</button>
-        <button class="btn" onclick="showReflection('rest')">Seeking Rest</button>
+      <div class="button-grid"> 
+       <button class="btn" onclick="showReflection('peace')">Seeking Peace</button>
+       <button class="btn" onclick="showReflection('trust')">Need Trust</button>
+       <button class="btn" onclick="showReflection('renewal')">New Heart</button>
+       <button class="btn" onclick="showReflection('rest')">Seeking Rest</button>
       </div>
 
-      <div id="tool-output">
-        <p style="color: var(--text-muted); font-style: italic;">Select a heart topic above to display your daily scripture...</p>
-      </div>
+       <!-- The container where the scripture and prompt display -->
+       <div id="tool-output">
+       <p style="color: #8c5b66; font-style: italic;">Select a heart topic above to display your daily scripture...</p>
+       </div>
+
     </section>
 
   </main>
@@ -283,7 +285,123 @@
         `;
       }
     }
-  </script>
+  <script>
+  // Content database for each button
+  const reflections = {
+    peace: {
+      verse: "“Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your hearts be troubled and do not be afraid.”",
+      ref: "John 14:27",
+      prompt: "Journal Prompt: What noise or anxiety can you surrender to God today in exchange for His quiet peace?"
+    },
+    trust: {
+      verse: "“Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.”",
+      ref: "Proverbs 3:5-6",
+      prompt: "Journal Prompt: Where in your life are you trying to control the outcome rather than trusting His plan?"
+    },
+    renewal: {
+      verse: "“I will give you a new heart and put a new spirit in you; I will remove from you your heart of stone and give you a heart of flesh.”",
+      ref: "Ezekiel 36:26",
+      prompt: "Journal Prompt: Ask the Lord to soften any areas of bitterness or weariness in your spirit today."
+    },
+    rest: {
+      verse: "“Come to me, all you who are weary and burdened, and I will give you rest.”",
+      ref: "Matthew 11:28",
+      prompt: "Journal Prompt: Take a deep breath. What heavy load are you holding that Jesus is asking you to set down?"
+    }
+  };
+
+  // Function called when any button is tapped
+  function showReflection(type) {
+    const output = document.getElementById('tool-output');
+    const data = reflections[type];
+
+    if (data) {
+      output.innerHTML = `
+        <div class="verse-text">${data.verse}</div>
+        <span class="verse-ref">— ${data.ref}</span>
+        <p class="reflection-prompt">${data.prompt}</p>
+      `;
+    }
+  }
+<script>
+  // Content database for each button
+  const reflections = {
+    peace: {
+      verse: "“Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your hearts be troubled and do not be afraid.”",
+      ref: "John 14:27",
+      prompt: "Journal Prompt: What noise or anxiety can you surrender to God today in exchange for His quiet peace?"
+    },
+    trust: {
+      verse: "“Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.”",
+      ref: "Proverbs 3:5-6",
+      prompt: "Journal Prompt: Where in your life are you trying to control the outcome rather than trusting His plan?"
+    },
+    renewal: {
+      verse: "“I will give you a new heart and put a new spirit in you; I will remove from you your heart of stone and give you a heart of flesh.”",
+      ref: "Ezekiel 36:26",
+      prompt: "Journal Prompt: Ask the Lord to soften any areas of bitterness or weariness in your spirit today."
+    },
+    rest: {
+      verse: "“Come to me, all you who are weary and burdened, and I will give you rest.”",
+      ref: "Matthew 11:28",
+      prompt: "Journal Prompt: Take a deep breath. What heavy load are you holding that Jesus is asking you to set down?"
+    }
+  };
+
+  // Function called when any button is tapped
+  function showReflection(type) {
+    const output = document.getElementById('tool-output');
+    const data = reflections[type];
+
+    if (data) {
+      output.innerHTML = `
+        <div class="verse-text">${data.verse}</div>
+        <span class="verse-ref">— ${data.ref}</span>
+        <p class="reflection-prompt">${data.prompt}</p>
+      `;
+    }
+  }
+<script>
+  // Content database for each button
+  const reflections = {
+    peace: {
+      verse: "“Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your hearts be troubled and do not be afraid.”",
+      ref: "John 14:27",
+      prompt: "Journal Prompt: What noise or anxiety can you surrender to God today in exchange for His quiet peace?"
+    },
+    trust: {
+      verse: "“Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.”",
+      ref: "Proverbs 3:5-6",
+      prompt: "Journal Prompt: Where in your life are you trying to control the outcome rather than trusting His plan?"
+    },
+    renewal: {
+      verse: "“I will give you a new heart and put a new spirit in you; I will remove from you your heart of stone and give you a heart of flesh.”",
+      ref: "Ezekiel 36:26",
+      prompt: "Journal Prompt: Ask the Lord to soften any areas of bitterness or weariness in your spirit today."
+    },
+    rest: {
+      verse: "“Come to me, all you who are weary and burdened, and I will give you rest.”",
+      ref: "Matthew 11:28",
+      prompt: "Journal Prompt: Take a deep breath. What heavy load are you holding that Jesus is asking you to set down?"
+    }
+  };
+
+  // Function called when any button is tapped
+  function showReflection(type) {
+    const output = document.getElementById('tool-output');
+    const data = reflections[type];
+
+    if (data) {
+      output.innerHTML = `
+        <div class="verse-text">${data.verse}</div>
+        <span class="verse-ref">— ${data.ref}</span>
+        <p class="reflection-prompt">${data.prompt}</p>
+      `;
+    }
+  }
+</script>
+
+ 
 
 </body>
 </html>
