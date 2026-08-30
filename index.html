@@ -1,163 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Scripture & Softness Bible Co.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scripture & Softness Bible Co. | Gentle Aesthetics & Biblical Truth</title>
+  <meta name="description" content="Scripture & Softness Bible Co. - Where gentle aesthetics meet deep Biblical truth through digital study guides and devotionals." />
+  
   <style>
+    /* Global Styles & Design System */
     :root {
-      --bg-color: #fff0f5;
-      --card-bg: #ffe4e1;
-      --accent-color: #d87093;
-      --text-color: #4a2e35;
-      --white: #ffffff;
+      --bg-color: #fcf9f5;
+      --card-bg: #ffffff;
+      --text-main: #3d3b38;
+      --text-muted: #6e6a64;
+      --accent-sage: #8a9a86;
+      --accent-sage-hover: #758571;
+      --accent-soft-blush: #e8dcd5;
+      --border-color: #ede7e1;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
+
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    header {
-      background-color: var(--white);
-      text-align: center;
-      padding: 2rem 1rem;
-      border-bottom: 2px solid var(--card-bg);
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
     }
-    header h1 {
-      color: var(--accent-color);
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-style: italic;
-      margin-top: 0.5rem;
-    }
-    container {
+
+    /* Container */
+    .container {
       max-width: 800px;
       margin: 0 auto;
-      padding: 2rem 1rem;
-      display: block;
+      padding: 2.5rem 1rem;
     }
+
+    /* Header Section */
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Section Cards */
     .card {
-      background: var(--white);
-      border-radius: 16px;
+      background-color: var(--card-bg);
+      border-radius: 12px;
       padding: 2rem;
       margin-bottom: 2rem;
-      box-shadow: 0 4px 15px rgba(216, 112, 147, 0.15);
-      border: 1px solid var(--card-bg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow);
     }
-    h2 {
-      color: var(--accent-color);
-      border-bottom: 2px dashed var(--card-bg);
-      padding-bottom: 0.5rem;
+
+    .card h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: var(--text-main);
     }
-    .btn-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-      margin: 1.5rem 0;
+
+    /* Interactive Buttons */
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
     }
-    button {
-      background-color: var(--card-bg);
-      color: var(--text-color);
-      border: 2px solid var(--accent-color);
-      padding: 0.8rem;
+
+    .tool-btn {
+      background-color: var(--accent-soft-blush);
+      color: var(--text-main);
+      border: 1px solid transparent;
+      padding: 0.6rem 1.2rem;
       border-radius: 20px;
-      font-weight: bold;
+      font-size: 0.95rem;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
     }
-    button:hover {
-      background-color: var(--accent-color);
-      color: var(--white);
+
+    .tool-btn:hover {
+      background-color: var(--accent-sage);
+      color: #ffffff;
     }
-    #tool-output {
+
+    /* Dynamic Output Box */
+    .output-box {
       background-color: var(--bg-color);
-      border-radius: 12px;
-      padding: 1.5rem;
+      border-left: 3px solid var(--accent-sage);
+      padding: 1.25rem;
+      border-radius: 0 8px 8px 0;
       margin-top: 1rem;
-      text-align: center;
     }
+
+    .output-box h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: var(--accent-sage-hover);
+    }
+
+    .output-box p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      color: var(--accent-color);
+      margin-top: 3rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>🌸 Scripture & Softness Bible Co. 🌸</h1>
-    <p>"Where Gentle Aesthetics Meet Deep Truth"</p>
-  </header>
+  <main class="container">
+    <!-- Header -->
+    <header>
+      <h1>Scripture & Softness Bible Co.</h1>
+      <p>Where gentle aesthetics meet deep Biblical truth</p>
+    </header>
 
-  <container>
-    <div class="card">
-      <h2>Our Mission & Portfolio</h2>
-      <p>Welcome to a calm, intentional space designed for quiet time, scripture reflection, and spiritual rest. We create soft-toned digital study guides, devotional templates, and faith aesthetics for your daily walk.</p>
-      
-      <h3>Pillars of Gentle Faith</h3>
-      <ul>
-        <li><strong>Scriptural Depth:</strong> Rooted in Biblical truth and intentional devotion.</li>
-        <li><strong>Soft Aesthetics:</strong> Pastel palettes designed to bring peace during quiet time.</li>
-        <li><strong>Grace-Filled Routine:</strong> Flexible scripture reflection free from pressure or guilt.</li>
-      </ul>
-    </div>
+    <!-- Welcome Section -->
+    <section class="card">
+      <h2>Welcome Friend</h2>
+      <p>Designed for those who long to slow down, cultivate stillness, and dwell deeply in the Word of God. Explore our digital study guides, devotionals, and reflection tools created for everyday spiritual growth.</p>
+    </section>
 
-    <div class="card">
+    <!-- Interactive Reflection Tool -->
+    <section class="card">
       <h2>The Gentle Reflection Tool</h2>
-      <p>Select how your heart feels today to receive a curated scripture prompt:</p>
+      <p style="margin-bottom: 1rem; color: var(--text-muted);">What does your heart need today?</p>
       
-      <div class="btn-grid">
-        <button onclick="getReflection('peace')">Seeking Peace</button>
-        <button onclick="getReflection('trust')">Need Trust</button>
-        <button onclick="getReflection('renewal')">New Heart</button>
-        <button onclick="getReflection('rest')">Seeking Rest</button>
+      <div class="button-group">
+        <button class="tool-btn" onclick="showReflection('peace')">Seeking Peace</button>
+        <button class="tool-btn" onclick="showReflection('trust')">Need Trust</button>
+        <button class="tool-btn" onclick="showReflection('heart')">New Heart</button>
+        <button class="tool-btn" onclick="showReflection('rest')">Seeking Rest</button>
       </div>
 
-      <div id="tool-output">
-        <p><em>Click a button above to generate today's verse & prompt. ✨</em></p>
+      <!-- Dynamic Output Area -->
+      <div id="tool-output" class="output-box">
+        <h3>Select a topic above</h3>
+        <p>Choose an option to reveal a comforting Scripture passage and reflection prompt.</p>
       </div>
-    </div>
-  </container>
+    </section>
+  </main>
 
+  <!-- Footer -->
   <footer>
-    &copy; 2026 Scripture & Softness Bible Co. All rights reserved.
+    <p>&copy; Scripture & Softness Bible Co. All rights reserved.</p>
   </footer>
 
+  <!-- Interactive Script -->
   <script>
     const reflections = {
       peace: {
-        verse: '"Peace I leave with you; my peace I give you. I do not give to you as the world gives." — John 14:27',
-        prompt: "Where can you let go of anxiety and rest in His stillness today?"
+        title: "Philippians 4:6–7",
+        text: "“Do not be anxious about anything, but in every situation, by prayerHere is the complete, updated code with all the standardized HTML tags, clean styling, dynamic JavaScript, and SEO improvements included. 
+
+You can copy and paste this into a single file named **`index.html`** and double-click it to run your site immediately in any browser.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Scripture & Softness Bible Co. - Where gentle aesthetics meet deep Biblical truth through digital study guides and devotionals.">
+  <title>Scripture & Softness Bible Co.</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap](https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap)" rel="stylesheet">
+
+  <style>
+    /* CSS Variables for Brand Colors & Fonts */
+    :root {
+      --bg-color: #faf7f5;
+      --card-bg: #ffffff;
+      --text-main: #4a4238;
+      --text-muted: #7d7367;
+      --accent: #d8c3b3;
+      --accent-hover: #c4ad9d;
+      --border-color: #efe8e2;
+      --font-heading: 'Cormorant Garamond', serif;
+      --font-body: 'Montserrat', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      border-bottom: 1px solid var(--border-color);
+      background-color: var(--card-bg);
+    }
+
+    header h1 {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--text-main);
+    }
+
+    header p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Standardized Main Container */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem;
+      flex: 1;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    }
+
+    .card h2 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+    }
+
+    /* Button Styling */
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      border: 1px solid var(--accent);
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--accent);
+      color: #ffffff;
+    }
+
+    /* Interactive Output Display */
+    #tool-output {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      background-color: var(--bg-color);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      min-height: 100px;
+    }
+
+    .verse-text {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+
+    .verse-ref {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .reflection-prompt {
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      background-color: var(--card-bg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Scripture & Softness</h1>
+    <p>Bible Co.</p>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="container">
+    
+    <!-- Welcome Card -->
+    <section class="card">
+      <h2>Welcome Friend</h2>
+      <p>Where gentle aesthetics meet deep Biblical truth. Explore our digital study guides, quiet-time resources, and daily encouragement designed to draw you closer to the Word.</p>
+    </section>
+
+    <!-- Interactive Reflection Tool Card -->
+    <section class="card">
+      <h2>The Gentle Reflection Tool</h2>
+      <p>Select what your heart is needing today to receive a prompt and scripture reflection:</p>
+      
+      <div class="button-grid">
+        <button class="btn" onclick="showReflection('peace')">Seeking Peace</button>
+        <button class="btn" onclick="showReflection('trust')">Need Trust</button>
+        <button class="btn" onclick="showReflection('renewal')">New Heart</button>
+        <button class="btn" onclick="showReflection('rest')">Seeking Rest</button>
+      </div>
+
+      <!-- Output Container for JavaScript -->
+      <div id="tool-output">
+        <p style="color: var(--text-muted); font-style: italic;">Select a heart topic above to display your daily scripture...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Scripture & Softness Bible Co. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Interactive Reflection Tool -->
+  <script>
+    const reflections = {
+      peace: {
+        verse: "“Peace I leave with you; my peace I give you. I do not give to you as the world gives. Do not let your hearts be troubled and do not be afraid.”",
+        ref: "John 14:27",
+        prompt: "Journal Prompt: What noise or anxiety can you surrender to God today in exchange for His quiet peace?"
       },
       trust: {
-        verse: '"Trust in the Lord with all your heart and lean not on your own understanding." — Proverbs 3:5-6',
-        prompt: "What situation are you ready to surrender control of this week?"
+        verse: "“Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.”",
+        ref: "Proverbs 3:5-6",
+        prompt: "Journal Prompt: Where in your life are you trying to control the outcome rather than trusting His plan?"
       },
       renewal: {
-        verse: '"I will give you a new heart and put a new spirit within you." — Ezekiel 36:26',
-        prompt: "In what area of your life are you asking God to soften and heal your heart?"
+        verse: "“I will give you a new heart and put a new spirit in you; I will remove from you your heart of stone and give you a heart of flesh.”",
+        ref: "Ezekiel 36:26",
+        prompt: "Journal Prompt: Ask the Lord to soften any areas of bitterness or weariness in your spirit today."
       },
       rest: {
-        verse: '"Come to me, all you who are weary and burdened, and I will give you rest." — Matthew 11:28',
-        prompt: "How can you give yourself permission to rest in His grace today?"
+        verse: "“Come to me, all you who are weary and burdened, and I will give you rest.”",
+        ref: "Matthew 11:28",
+        prompt: "Journal Prompt: Take a deep breath. What heavy load are you holding that Jesus is asking you to set down?"
       }
     };
 
-    function getReflection(category) {
-      const data = reflections[category];
-      document.getElementById('tool-output').innerHTML = `
-        <h3 style="color: #d87093;">📖 Today's Scripture</h3>
-        <p style="font-size: 1.1rem; font-weight: 500;">${data.verse}</p>
-        <h3 style="color: #d87093;">💭 Gentle Reflection Prompt</h3>
-        <p><em>${data.prompt}</em></p>
-      `;
+    function showReflection(type) {
+      const output = document.getElementById('tool-output');
+      const data = reflections[type];
+
+      if (data) {
+        output.innerHTML = `
+          <div class="verse-text">${data.verse}</div>
+          <span class="verse-ref">— ${data.ref}</span>
+          <p class="reflection-prompt">${data.prompt}</p>
+        `;
+      }
     }
   </script>
+
 </body>
 </html>
+
